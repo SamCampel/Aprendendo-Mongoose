@@ -36,13 +36,13 @@ Este repositório contém exemplos de código para trabalhar com o Mongoose.
    git clone https://github.com/SamCampel/Aprendendo-Mongoose.git
 
 2. Entre no diretório do projeto:
-
-```bash
-cd Aprendendo-Mongoose
+   
+   ```bash
+   cd Aprendendo-Mongoose
 
 3. Instale as dependências:
 
-```bash
-npm install
+   ```bash
+   npm install
 
 4. Configure suas credenciais do MongoDB no arquivo config/database.js (caso aplicável).
