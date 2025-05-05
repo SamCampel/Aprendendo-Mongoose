@@ -10,10 +10,39 @@ mongoose.connect(uri)
 
 const Article = mongoose.model("Article", articlemodel);
 
+/* Busca todos os artigos
+Article.find({})
+    .then((articles) => {
+        console.log("Artigos encontrados:", articles);
+    })
+    .catch((err) => {
+        console.error("Erro ao encontrar artigos:", err);
+    });
+*/
+
+//Busca um artigo específico pelo ID
+Article.find({'author':'Samuel'})
+    .then((article) => {
+        console.log("Artigos encontrados:", article);
+    })
+    .catch((err) => {
+        console.error("Erro ao encontrar artigos:", err);
+    });
+
+
+/*
+// Exemplo de como criar um novo artigo
+
 const artigo = new Article({
-    title: "Meu primeiro artigo",
+    title: "Qualquer coisa",
     author: "Samuel",
-    body: "Esse é o meu primeiro artigo no MongoDB"});
+    body: "Qualquer coisa",
+    special: true,
+    resume: {
+        content: "Qualquer coisa",
+        author: "Samuel"
+    }
+});
     
     artigo.save()
         .then(() => {
@@ -21,3 +50,4 @@ const artigo = new Article({
         }).catch((err) => {
             console.error("Erro ao salvar o artigo:", err);
         });
+*/

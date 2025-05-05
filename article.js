@@ -1,18 +1,14 @@
 const mongoose = require('mongoose');
-const { type } = require('os');
+
 const articlemodel = new mongoose.Schema({
-    title: {
-        type: String,
-        author: String,
-        body: String,
-        date: {type: Date, default: Date.now},
-        special: Boolean,
-        resume: {
-            content: {
-                type: String,
-                author: String
-            }
-        }
+    title: { type: String, required: true },
+    author: { type: String, required: true },
+    body: { type: String },
+    date: { type: Date, default: Date.now },
+    special: { type: Boolean },
+    resume: {
+        content: { type: String },
+        author: { type: String }
     }
 });
 
