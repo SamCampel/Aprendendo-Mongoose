@@ -20,7 +20,7 @@ Article.find({})
     });
 */
 
-//Busca um artigo específico pelo ID
+/*Busca um artigo específico pelo ID
 Article.find({'author':'Samuel'})
     .then((article) => {
         console.log("Artigos encontrados:", article);
@@ -28,7 +28,7 @@ Article.find({'author':'Samuel'})
     .catch((err) => {
         console.error("Erro ao encontrar artigos:", err);
     });
-
+*/
 
 /*
 // Exemplo de como criar um novo artigo
@@ -51,3 +51,11 @@ const artigo = new Article({
             console.error("Erro ao salvar o artigo:", err);
         });
 */
+
+//Deletar um dado
+
+Article.findByIdAndDelete("68190944592d6e51776bb239").then(() => {
+    console.log("Artigo deletado com sucesso!");
+}).catch((err) => {
+    console.error("Erro ao deletar o artigo:", err);
+});
