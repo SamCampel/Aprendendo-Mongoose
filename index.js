@@ -52,10 +52,17 @@ const artigo = new Article({
         });
 */
 
-//Deletar um dado
-
+/*Deletar um dado
 Article.findByIdAndDelete("68190944592d6e51776bb239").then(() => {
     console.log("Artigo deletado com sucesso!");
 }).catch((err) => {
     console.error("Erro ao deletar o artigo:", err);
-});
+});*/
+
+/*Atualizar um dado*/
+Article.findByIdAndUpdate("68190b00560b1cc87cb0c8b9", { title: "Qualquer coisa Novo título", body: "Atualizando o body" })
+    .then(() => {
+        console.log("Artigo atualizado");
+    }).catch((err) => {
+        console.error("Erro ao atualizar o artigo:", err);
+    });
